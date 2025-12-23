@@ -1,0 +1,97 @@
+.Footer-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+/* Divider */
+.Footer-container > hr {
+    border: none;
+    border-top: 1px solid var(--lightgray);
+    margin-bottom: 2rem;
+}
+
+/* Footer wrapper */
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    padding: 2rem 1rem;
+    height: 18rem;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+
+/* Social links container */
+.social-links {
+    display: flex;
+    align-items: center;
+    gap: 2.5rem;
+}
+
+/* 🔥 CRITICAL FIX: force icon size */
+.social-links a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.social-links a img {
+    width: 32px;
+    height: 32px;
+    max-width: 32px;
+    max-height: 32px;
+    object-fit: contain;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.social-links a img:hover {
+    transform: scale(1.15);
+}
+
+/* Logo */
+.logo-f img {
+    width: 9rem;
+    object-fit: contain;
+}
+
+/* Blur effects */
+.blur-f-1,
+.blur-f-2 {
+    position: absolute;
+    bottom: 0;
+    width: 26rem;
+    height: 12rem;
+    filter: blur(200px);
+    z-index: 0;
+}
+
+.blur-f-1 {
+    right: 15%;
+    background: red;
+}
+
+.blur-f-2 {
+    left: 15%;
+    background: rgb(255, 115, 0);
+}
+
+/* 📱 Mobile */
+@media (max-width: 768px) {
+    .footer {
+        height: auto;
+        gap: 2rem;
+    }
+
+    .social-links {
+        gap: 2rem;
+    }
+
+    .logo-f img {
+        width: 7rem;
+    }
+}
